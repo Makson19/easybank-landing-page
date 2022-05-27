@@ -1,0 +1,21 @@
+
+@mixin flex($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin gradient($color1, $color2) {
+    background: linear-gradient(90deg, $color1 0%, $color2 100%)
+}
+
+@mixin button($display, $bgColor1, $bgColor2, $fontWeight, $colorText) {
+    display: $display;
+    font-size: 1.8rem;
+    font-weight: $fontWeight;
+    background: linear-gradient(90deg, $bgColor1 0%, $bgColor2 100%);
+    padding: 1.5rem 4rem;
+    border-radius: 4rem;
+    color: $colorText;
+}

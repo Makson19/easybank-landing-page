@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html, body {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Public Sans", sans-serif;
+}
+
+.navbar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 6.2rem;
+  padding-inline: 2rem;
+}
+
+.navbar__logo {
+  display: inline-block;
+  width: 14rem;
+}
+
+.navbar__logo img {
+  width: 100%;
+}
+
+.navbar__menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1.5rem;
+  margin: 2rem 2rem 0rem;
+  padding-block: 2rem;
+  background: white;
+  opacity: 1;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.navbar__menu li > a {
+  color: #000;
+}
+
+.navbar__btnMobile {
+  width: 3rem;
+  height: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar__btnMobile img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar__btnRequest {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding-inline: 4rem;
+  }
+  .navbar__menu {
+    margin-inline: 4rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navbar {
+    height: 9rem;
+    padding-inline: 10rem;
+  }
+  .navbar__logo {
+    width: 18rem;
+  }
+  .navbar__menu {
+    position: relative;
+    top: 0;
+    z-index: 0;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    margin: 0;
+    padding: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2.5rem;
+    height: 100%;
+  }
+  .navbar__menu li {
+    height: 100%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .navbar__menu li a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    color: #9698a6;
+  }
+  .navbar__menu li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.3rem;
+    background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+    background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
+    opacity: 0;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .navbar__menu li a:hover::before {
+    opacity: 1;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .navbar__btnMobile {
+    display: none;
+  }
+  .navbar__btnRequest {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+    background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
+    padding: 1.5rem 4rem;
+    border-radius: 4rem;
+    color: white;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__hero {
+  height: 30rem;
+  overflow: hidden;
+  padding-inline: 2rem;
+  background: url("../../images/bg-intro-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  text-align: center;
+}
+
+.header__hero img {
+  max-width: 33.5rem;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: 0 -12rem;
+     object-position: 0 -12rem;
+}
+
+.header__content {
+  padding-top: 2rem;
+  padding-inline: 2rem;
+  text-align: center;
+}
+
+.header__content-title {
+  font-size: 3.8rem;
+  font-weight: 400;
+  color: #2d314d;
+  margin-bottom: 2rem;
+}
+
+.header__content-description {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #9698a6;
+  margin-bottom: 4rem;
+}
+
+.header__content-btn {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
+  padding: 1.5rem 4rem;
+  border-radius: 4rem;
+  color: white;
+}
+
+.container-nav, .container-header {
+  max-width: 144rem;
+  margin-inline: auto;
+}
+
+.active-container::before {
+  content: "";
+  position: absolute;
+  top: 6.2rem;
+  left: 0;
+  background-color: #000;
+  opacity: 0.25;
+  width: 100%;
+  height: 100vh;
+}
+
+.active-menu {
+  border-radius: 0.5rem;
+  -webkit-transform: scaleY(1) !important;
+          transform: scaleY(1) !important;
+}
+
+.active-btn {
+  width: 3rem !important;
+  height: 2rem !important;
+}
+
+.active-btn img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  content: url("../../images/icon-close.svg");
+}
+/*# sourceMappingURL=style.css.map */

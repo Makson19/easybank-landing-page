@@ -1,0 +1,34 @@
+.container-nav, .container-header {
+    max-width: 144rem;
+    margin-inline: auto;
+}
+
+.active-container {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 6.2rem;
+        left: 0;
+        background-color: #000;
+        opacity: 0.25;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+.active-menu {
+    border-radius: 0.5rem;
+    transform: scaleY(1) !important;
+}
+
+.active-btn {
+    width: 3rem !important;
+    height: 2rem !important;
+    
+    img {
+        // width: 100%;
+        // height: 100%;
+        object-fit: contain;
+        content: url("../../images/icon-close.svg");
+    }
+}

@@ -1,0 +1,45 @@
+.header {
+    @include flex(column, center, center);
+
+    &__hero {
+        // flex: 1;
+        height: 30rem;
+        overflow: hidden;
+        padding-inline: 2rem;
+        background: url("../../images/bg-intro-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        text-align: center;
+
+        img {
+            max-width: 33.5rem;
+            object-fit: fill;
+            object-position: 0 -12rem;
+        }
+    }
+
+    &__content {
+        padding-top: 2rem;
+        padding-inline: 2rem;
+        text-align: center;
+
+        &-title {
+            font-size: 3.8rem;
+            font-weight: $regular;
+            color: $dark-blue;
+            margin-bottom: 2rem;
+        }
+
+        &-description {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            color: $grayish-blue;
+            margin-bottom: 4rem;
+        }
+
+        &-btn {
+            @include button(inline-block, $lime-green, $bright-cyan, $bold, $white);
+        }
+    }
+}

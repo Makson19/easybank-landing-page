@@ -1,0 +1,140 @@
+
+.navbar {
+    position: relative;
+    @include flex(row, center, space-between);
+    height: 6.2rem;
+    padding-inline: 2rem;
+    
+
+    &__logo {
+        display: inline-block;
+        width: 14rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 99;
+
+        font-size: 1.8rem;
+        @include flex(column, center, flex-start);
+        gap: 1.5rem;
+        margin: 2rem 2rem 0rem;
+        padding-block: 2rem;
+        background: $white;
+        opacity: 1;
+
+        transform: scaleY(0);
+        transform-origin: top;
+
+        transition: all 0.3s linear;
+
+        li > a {
+            color: #000;
+        }
+    }
+
+    &__btnMobile {
+        width: 3rem;
+        height: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+        background-color: inherit;
+        transition: 0.3s ease-in-out;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__btnRequest {
+        display: none;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .navbar {
+        padding-inline: 4rem;
+
+        &__menu {
+            margin-inline: 4rem;
+        }
+    }
+
+}
+
+
+@media (min-width: 1000px) {
+    .navbar {
+        height: 9rem;
+        padding-inline: 10rem;
+
+        &__logo {
+            width: 18rem;
+        }
+
+        &__menu {
+            position: relative;
+            top: 0;
+            z-index: 0;
+            transform: scaleY(1);
+            margin: 0;
+            padding: 0;
+            flex-direction: row;
+            gap: 2.5rem;
+            height: 100%;
+
+            li {
+                height: 100%;
+                display: inline-flex;
+                align-items: center;
+                position: relative;
+
+                a {
+                    display: inline-flex;
+                    align-items: center;
+                    height: 100%;
+                    color: $grayish-blue;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 0.3rem;
+                        @include gradient($lime-green, $bright-cyan);
+                        opacity: 0;
+                        transform: scaleX(0);
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                        
+                    &:hover::before {
+                        opacity: 1;
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+
+        &__btnMobile {
+            display: none;
+        }
+
+        &__btnRequest {
+            @include button(inline-block, $lime-green, $bright-cyan, $bold, $white);
+        }
+    }
+}
