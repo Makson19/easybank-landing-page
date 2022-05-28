@@ -1,4 +1,6 @@
 .header {
+    width: Min(50rem, 100%);
+    margin-inline: auto;
     @include flex(column, center, center);
 
     &__hero {
@@ -14,7 +16,6 @@
 
         img {
             max-width: 33.5rem;
-            object-fit: fill;
             object-position: 0 -12rem;
         }
     }
@@ -22,7 +23,9 @@
     &__content {
         padding-top: 2rem;
         padding-inline: 2rem;
+        padding-bottom: 8rem;
         text-align: center;
+        // width: min(50rem, 100%);
 
         &-title {
             font-size: 3.8rem;

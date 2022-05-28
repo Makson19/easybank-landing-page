@@ -1,6 +1,14 @@
-.container-nav, .container-header {
-    max-width: 144rem;
-    margin-inline: auto;
+// .container-nav, .container-header {
+//     max-width: 144rem;
+//     margin-inline: auto;
+// }
+
+.container-header {
+    background-color: $very-light-gray;
+}
+
+.container-main {
+    background-color: $light-grayish-blue;
 }
 
 .active-container {

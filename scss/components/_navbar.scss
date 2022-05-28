@@ -1,5 +1,7 @@
 
 .navbar {
+    max-width: 144rem;
+    margin-inline: auto;
     position: relative;
     @include flex(row, center, space-between);
     height: 6.2rem;

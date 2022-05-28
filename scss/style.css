@@ -17,6 +17,8 @@ body {
 }
 
 .navbar {
+  max-width: 144rem;
+  margin-inline: auto;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -197,6 +199,8 @@ body {
 }
 
 .header {
+  width: Min(50rem, 100%);
+  margin-inline: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,8 +229,6 @@ body {
 
 .header__hero img {
   max-width: 33.5rem;
-  -o-object-fit: fill;
-     object-fit: fill;
   -o-object-position: 0 -12rem;
      object-position: 0 -12rem;
 }
@@ -234,6 +236,7 @@ body {
 .header__content {
   padding-top: 2rem;
   padding-inline: 2rem;
+  padding-bottom: 8rem;
   text-align: center;
 }
 
@@ -262,9 +265,68 @@ body {
   color: white;
 }
 
-.container-nav, .container-header {
-  max-width: 144rem;
+.main {
+  width: Min(50rem, 100%);
   margin-inline: auto;
+  padding-inline: 1.7rem;
+  padding-block: 6rem;
+}
+
+.main__choose-description {
+  text-align: center;
+}
+
+.main__choose-description h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  padding-inline: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.main__choose-description p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.2rem;
+  color: #9698a6;
+}
+
+.main__choose-container_cards {
+  margin-top: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+}
+
+.main__choose-container_cards .card {
+  text-align: center;
+}
+
+.main__choose-container_cards .card img {
+  width: 6.5rem;
+}
+
+.main__choose-container_cards .card h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-block: 2rem;
+}
+
+.main__choose-container_cards .card p {
+  font-size: 1.5rem;
+  color: #9698a6;
+}
+
+.container-header {
+  background-color: #fafafa;
+}
+
+.container-main {
+  background-color: #f3f4f6;
 }
 
 .active-container::before {
