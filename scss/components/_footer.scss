@@ -1,0 +1,113 @@
+.footer {
+    width: Min(55rem, 100%);
+    margin-inline: auto;
+    @include flex(column, center, center);
+    gap: 2rem;
+    padding-block: 4rem; 
+
+    &__logos {
+        text-align: center;
+
+        &-logo {
+            width: auto;
+        }
+
+        &-socials {
+            margin-top: 2rem;
+            @include flex(row, center, center);
+            gap: 1.5rem;
+
+            a {
+                i:hover > svg > path {
+                    fill: $lime-green;
+                    transition: fill 0.3s ease-in-out;            
+                }
+
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__navigation {
+        @include flex(column, center, center);
+        text-align: center;
+
+        ul > li {
+            margin-bottom: 1.2rem;
+
+            a {
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+                color: $very-light-gray;
+                opacity: 0.8;
+                transition: color 0.3s ease-in-out;
+
+                &:hover {
+                    color: $lime-green;
+                }
+            }
+        }
+    }
+
+    &__end {
+
+        .btn-request {
+            @include button(inline-block, $lime-green, $bright-cyan, $bold, $white);
+            transition: opacity 0.3s ease-in-out;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: $very-light-gray;
+            opacity: 0.5;
+            margin-top: 3rem;
+        }
+    }
+}
+
+
+@media (min-width: 62.5rem) {
+    .footer {
+        width: auto;
+        max-width: 144rem;
+        @include flex(row, flex-start, space-between);
+        padding-inline: 10rem;
+
+        &__logos {
+            text-align: left;
+
+            &-socials {
+                margin-top: 4rem;
+            }
+        }
+
+        &__navigation {
+            flex-direction: row;
+            text-align: left;
+            gap: 3rem;
+
+            ul > li> a {
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+}
+
+
+@media (min-width: 75rem) {
+    .footer {
+        padding-inline: 15rem;
+
+        &__navigation {
+            gap: 12rem;
+            margin-right: 20rem;
+        }
+    }
+}
