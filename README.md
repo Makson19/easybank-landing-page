@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Code](https://github.com/Makson19/easybank-landing-page)
-- Live Site URL: [Live Demo](https://your-live-site-url.com)
+- Live Site URL: [Live Demo](https://makson19.github.io/easybank-landing-page/)
 
 ## My process
 
