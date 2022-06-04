@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Code](https://easybankapp2.netlify.app/)
-- Live Site URL: [Live Demo](https://makson19.github.io/easybank-landing-page/)
+- Solution URL: [Code](https://github.com/Makson19/easybank-landing-page)
+- Live Site URL: [Live Demo](https://easybankapp2.netlify.app/)
 
 ## My process
 
