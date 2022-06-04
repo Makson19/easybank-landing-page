@@ -103,6 +103,7 @@ body {
 }
 
 .navbar__btnMobile img {
+  content: url("../../images/icon-hamburger.svg");
   width: 100%;
   height: 100%;
 }
