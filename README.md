@@ -26,10 +26,10 @@ Users should be able to:
 
 #### Desktop
 
-![](./screenshot.png)
+![](./screenshots/screenshot-desktop.png)
 
 #### Mobile
-<img src="./screenshot-mobile.png" alt="screenshot mobile" width="375" />
+<img src="./screenshots/screenshot-mobile.png" alt="screenshot mobile" width="375" />
 
 ### Links
 
