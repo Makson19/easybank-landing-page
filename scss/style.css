@@ -604,7 +604,7 @@ body {
   gap: 1.5rem;
 }
 
-.footer__logos-socials a span {
+.footer__logos-socials a .sr-only {
   display: none;
 }
 
