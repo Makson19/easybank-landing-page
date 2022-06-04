@@ -18,13 +18,13 @@
             gap: 1.5rem;
 
             a {
+                span {
+                    display: none;
+                }
+
                 i:hover > svg > path {
                     fill: $lime-green;
                     transition: fill 0.3s ease-in-out;            
-                }
-
-                span {
-                    display: none;
                 }
             }
         }

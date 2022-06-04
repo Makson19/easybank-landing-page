@@ -1,7 +1,3 @@
-// .container-nav, .container-header {
-//     max-width: 144rem;
-//     margin-inline: auto;
-// }
 
 .container-header, .container-articles {
     background-color: $very-light-gray;
@@ -38,8 +34,6 @@
     height: 2rem !important;
     
     img {
-        // width: 100%;
-        // height: 100%;
         object-fit: contain;
         content: url("../../images/icon-close.svg");
     }

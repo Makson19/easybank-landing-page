@@ -603,14 +603,14 @@ body {
   gap: 1.5rem;
 }
 
+.footer__logos-socials a span {
+  display: none;
+}
+
 .footer__logos-socials a i:hover > svg > path {
   fill: #31d35c;
   -webkit-transition: fill 0.3s ease-in-out;
   transition: fill 0.3s ease-in-out;
-}
-
-.footer__logos-socials a span {
-  display: none;
 }
 
 .footer__navigation {
